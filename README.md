@@ -20,7 +20,7 @@ Open http://localhost:3000—boom, ready to test uploads.
 
 For prod-like: npm run build then npm start.
 Deployed Link
-Live demo on Vercel: https://my-app-demo.vercel.app
+Live demo on Netlify: https://printing-photos-demo.netlify.app/
 (Grabbed a free deploy—loads in a flash, works great on mobile.)
 Folder Breakdown (Kept It Simple)
 
