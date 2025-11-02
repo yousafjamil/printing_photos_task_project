@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import { PrintSize, calculateTotalPrice, printSizes } from './../lib/utils';
 import { Photo } from './../lib/utils';
@@ -10,7 +9,7 @@ interface SizeSelectorProps {
 }
 
 export default function SizeSelector({ photos, onTotalChange }: SizeSelectorProps) {
-  const [selectedSize, setSelectedSize] = useState<PrintSize>(printSizes[0]); // Default to first
+  const [selectedSize, setSelectedSize] = useState<PrintSize>(printSizes[0]); //by  default  first one
 
   const handleSizeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const value = e.target.value;

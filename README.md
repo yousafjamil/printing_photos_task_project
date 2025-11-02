@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Photo Printing Demo
+Hey there! This is a quick mock-up I whipped up for the photo printing app task. It's a simple Next.js page where user can upload up to 5 pics from their phone, pick a print size, see the price auto update, and hit a fake "Pay Now" button. Kept it mobile first tried it on my phone, scrolls nice and uploads feel smooth.
+Built this in a couple hours to show the basics: clean code, fast loads, and all the features they asked for. No fancy backend (local previews only), but it nails the upload/preview/price/pay flow.
+What's Inside
 
-## Getting Started
+Upload Zone: Drag drop or click to add photos (images only, caps at 5). Thumbs show up as neat squares—fixed 'em so no weird stretching.
+Size Picker: Dropdown for 4×6 (AED 1.5 each), 5×7 (AED 3), or 8×10 (AED 5). Total price recalcs on the fly.
+Summary Card: Quick recap of your order (photo count, size, total)—pops up once you upload.
+Pay Button: Fake alert on click (e.g., "Order placed!"). Disables if no pics.
+Mobile Vibes: Tailwind makes it responsive—grids stack, buttons full-width, no lag.
 
-First, run the development server:
+Tech: Next.js 14 (App Router + TypeScript), Tailwind for styles, React hooks for state. No extra libs—kept it lean.
+How to Run It Locally
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Clone or download: git clone (https://github.com/yousafjamil/printing_photos_task_project.git) (or unzip the folder).
+Hop in: cd my_app.
+Install stuff: npm install.
+Start dev mode: npm run dev.
+Open http://localhost:3000—boom, ready to test uploads.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+For prod-like: npm run build then npm start.
+Deployed Link
+Live demo on Vercel: https://my-app-demo.vercel.app
+(Grabbed a free deploy—loads in a flash, works great on mobile.)
+Folder Breakdown (Kept It Simple)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+src/app/page.tsx: The main page—wires everything together.
+src/components/: Bits like PhotoUpload.tsx (handles files/thumbs), SizeSelector.tsx (dropdown + math), PayButton.tsx (the button).
+src/lib/utils.ts: Types and helpers (prices, calc function).
+Everything else: Standard Next.js setup.
